@@ -8,12 +8,16 @@ body {
   min-height: 100vh;
   text-align: center;
   background-color: #758694;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 header {
   display: flex;
   align-items: center;
-  margin-top: 5.9375rem;
+  margin-top: 50px;
   gap: 1.25rem;
   justify-content: center;
 }
@@ -29,6 +33,23 @@ header > img {
   height: 3.75rem;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
 .add-todo {
   display: flex;
   align-items: center;
@@ -36,28 +57,42 @@ header > img {
   gap: 0.625rem;
 }
 
+#logo {
+  color: #008000;
+}
+
 #add-input {
   background-color: #d9d9d9;
   width: 37.5rem;
   padding: 0.9375rem 1.25rem;
   outline: none;
-  border-radius: 0.3125rem;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   border: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
 }
 
 #add-btn {
-  background-color: #36ba98;
+  padding: 14px;
+  color: green;
   border: none;
   border-radius: 0.3125rem;
   cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .divider {
   height: 0.0625rem;
-  background-color: #362d2d;
+  background-color: #868686;
   margin: 3.125rem 0rem;
   width: 100%;
 }
@@ -76,13 +111,22 @@ header > img {
   justify-content: center;
   gap: 0.625rem;
   margin-bottom: 0.625rem;
+  height: 50px;
+  word-break: break-all;
 }
 
 .del-btn {
   border-radius: 0.3125rem;
   border: none;
-  background-color: maroon;
+  color: maroon;
+  padding: 14px;
+  width: 50px;
   cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .container > div {
@@ -90,15 +134,23 @@ header > img {
   width: 37.5rem;
   background-color: #d9d9d9;
   padding: 0.625rem;
-  border-radius: 5px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .container > div > label {
   display: flex;
+  text-align: left;
   gap: 10px;
   cursor: pointer;
+}
+
+span {
+  word-wrap: break-word;
 }
 
 .hide {
@@ -118,6 +170,7 @@ input[type="checkbox"] {
   height: 20px;
   border: 2px solid black;
   border-radius: 2px;
+  flex-shrink: 0;
   transition: 100ms ease all;
 }
 
@@ -136,11 +189,34 @@ input[type="checkbox"]:checked + label > span {
   color: rgb(79, 79, 79);
 }
 
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.56);
+}
+
 input[type="checkbox"]:checked + label::before {
   content: "\002714";
-  border: 2px solid #009c52;
-  color: #009c52;
+  border: 2px solid #008000;
+  color: #008000;
   font-size: 35px;
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+  header h1 {
+    font-weight: 800;
+  }
+
+  main,
+  .add-todo {
+    width: 90%;
+  }
+
+  .empty-todo {
+    font-size: 24px;
+  }
+
+  .container {
+    width: 100%;
+  }
 }

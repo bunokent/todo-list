@@ -18,7 +18,7 @@ function createHTMl(html) {
 
 function addTodoItem() {
   if (addInput.value === "") return;
-  ++listCounter;
+  listCounter++;
   empty.classList.add("hide");
 
   const template = createHTMl(`
@@ -29,15 +29,15 @@ function addTodoItem() {
           <span>${addInput.value}</span>
         </label>
       </div>
-      <button id="del-btn${listCounter}" class="del-btn"><img src="./assets/delete.png" /></button>
+      <button id="del-btn${listCounter}" class="del-btn"><i class="fa-lg fa-solid fa-trash"></i></button>
     </div>
     `);
   mainEl.appendChild(template);
   const currentBtn = document.getElementById(`del-btn${listCounter}`);
   delBtns.push(currentBtn);
   currentBtn.addEventListener("click", function () {
-    this.parentNode.remove();
     listCounter--;
+    this.parentNode.remove();
     if (listCounter === 0) empty.classList.remove("hide");
   });
 }
