@@ -220,3 +220,21 @@ input[type="checkbox"]:checked + label::before {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 460px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  header {
+    margin-bottom: 20px;
+  }
+
+  main {
+    font-size: 14px;
+  }
+
+  #add-input {
+    font-size: 14px;
+  }
+}
