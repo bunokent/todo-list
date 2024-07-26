@@ -18,25 +18,20 @@ header {
   display: flex;
   align-items: center;
   margin-top: 50px;
-  gap: 1.25rem;
+  gap: 20px;
   justify-content: center;
 }
 
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
-  font-size: 4rem;
-  color: white;
-}
-
-header > img {
-  height: 3.75rem;
+  font-size: 64px;
+  color: #d9d9d9;
 }
 
 main {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 10px;
   margin-top: 50px;
@@ -54,7 +49,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
+  gap: 10px;
 }
 
 #logo {
@@ -63,11 +58,11 @@ main {
 
 #add-input {
   background-color: #d9d9d9;
-  width: 37.5rem;
-  padding: 0.9375rem 1.25rem;
+  width: 600px;
+  padding: 15px 20px;
   outline: none;
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   border: none;
   background: rgba(255, 255, 255, 0.15);
@@ -91,9 +86,9 @@ main {
 }
 
 .divider {
-  height: 0.0625rem;
+  height: 1px;
   background-color: #868686;
-  margin: 3.125rem 0rem;
+  margin: 50px 0px;
   width: 100%;
 }
 
@@ -111,7 +106,7 @@ main {
   justify-content: center;
   gap: 0.625rem;
   margin-bottom: 0.625rem;
-  height: 50px;
+  height: 3.125rem;
   word-break: break-all;
 }
 
@@ -119,14 +114,13 @@ main {
   border-radius: 0.3125rem;
   border: none;
   color: maroon;
-  padding: 14px;
-  width: 50px;
+  padding: 0.875rem;
+  width: 3.125rem;
   cursor: pointer;
-
   background: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0.625rem;
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(0.625rem);
 }
 
 .container > div {
@@ -137,20 +131,16 @@ main {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   background: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0.625rem;
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(0.625rem);
 }
 
 .container > div > label {
   display: flex;
   text-align: left;
-  gap: 10px;
+  gap: 0.625rem;
   cursor: pointer;
-}
-
-span {
-  word-wrap: break-word;
 }
 
 .hide {
@@ -213,7 +203,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .empty-todo {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .container {
@@ -223,18 +213,18 @@ input[type="checkbox"]:checked + label::before {
 
 @media screen and (max-width: 460px) {
   h1 {
-    font-size: 45px;
+    font-size: 2.8125rem;
   }
 
   header {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   main {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   #add-input {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
